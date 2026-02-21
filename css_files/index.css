@@ -20,21 +20,28 @@ body{
   background: var(--white);
   margin: 0 auto;
 }
-@property --deg {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0deg;
-}
-@keyframes autoRotate {
-  to{--deg: 360deg;}
-}
 main{
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  margin: 2.5rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width:800px){
+  main{
+    width: 90%;
+    height: 90%;
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width:992px){
+  main{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 h1,h2{
   text-align: center;
@@ -51,6 +58,15 @@ img{
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+/* To make a rotating gradient border */
+@property --deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@keyframes autoRotate {
+  to{--deg: 360deg;}
 }
 .interactive-map {
   position: relative;

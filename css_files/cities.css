@@ -2,21 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 :root{
   --white:#ead9c7;
   --light-blue:#547792;
   --dark-blue:#1A3263;
   --orange:#FAB95B;
-  --main-padding:1rem;
+  --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 body{
   font-family: "Lato",Arial, Helvetica, sans-serif;
   line-height: 1.4;
   font-size: 16px;
-  padding: 0 var(--main-padding);
-  width: 768px;
   background: var(--white);
   margin: 0 auto;
   display: flex;
@@ -24,6 +21,8 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -32,36 +31,52 @@ ul{
   list-style: none;
 }
 header{
+  z-index: 9999;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 1.5rem;
+  width: 100%;
+  height: 2rem;
   position: sticky;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 1.2rem;
   background-color: var(--white);
+  a{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--dark-blue);
+    font-weight: 800;
+  }
 }
 .home-button{
   width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .nav-links{
   width: 60%;
+  ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  li{
+    margin: 0 0.2rem;
+  }
 }
-.nav-links ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+/* change home button when screen size is small */
+@media screen and (max-width:800px) {
+  .home-button{
+    a+a{display: none;}
+    i{font-size: 2rem;}
+  }
 }
-header h1, .nav-links a{
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  color: var(--dark-blue);
-  font-weight: 800;
-}
+
 /* add border and text change effect to header when scrolling down */
 .scrolled {
     border-bottom: 1px solid #a5a3a3;
@@ -70,13 +85,99 @@ header h1, .nav-links a{
 html {
     scroll-behavior: smooth;
 }
-header h1:hover, .nav-links a:hover{
+header a:hover, header i:hover, .nav-links a:hover{
   color: var(--orange);
 }
-.nav-links li{
-  margin: 0 0.2rem;
-}
-
+/* end of header css */
 main{
-  padding-top: calc(var(--main-padding)*5);
+  padding-top: 3rem;
+  margin: 0 auto;
+}
+.target{
+  height: 2.5rem;
+  display: block;
+}
+section{
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding: 1rem;
+}
+.card{
+  background: var(--white);
+  border: 5px solid var(--light-blue);
+  padding: 0.8rem 0.5rem 1rem 1.2rem;
+  width: 60%;
+  box-shadow: var(--box-shadow);
+  border-radius: 3px;
+  p::first-letter{font-size: 1.5rem;
+  font-weight: bolder;}
+}
+#what{
+  background-image: url(/pictures/uk_big_ben.png);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: right bottom;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  img{
+    width: 65%;
+    height: calc((65%/16*9));
+    border-radius: 5px;
+    border: 3px solid var(--orange);
+    box-shadow: var(--box-shadow);
+  }
+}
+.title{
+  font-family: "Bona Nova SC";
+  line-height: 1;
+  h2{font-size: 3rem;}
+  p{font-size: 1.3rem;
+  padding-left: 0.5rem;
+  font-weight: 500;}
+}
+@media screen and (min-width:800px) {
+  #what{
+    background-size: 900px;
+  }
+  .title{
+    h2{font-size: 3.5rem;}
+    p{font-size: 1.5rem;}
+    }
+}
+@media screen and (min-width:992px){
+  #what{
+    background-size: cover;
+    img{align-self: center;}
+  }
+  .title{
+  h2{font-size: 4rem;}
+  p{font-size: 1.5rem;}
+  }
+}
+#where{
+  background-image: url(/pictures/uk_london_location.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right bottom;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  iframe{
+    width: 50%;
+    border-radius: 5px;
+    border: 5px solid var(--dark-blue);
+    box-shadow: var(--box-shadow);
+  }
+}
+@media screen and (min-width:800px) {
+  #where{
+    background-size: 50%;
+    iframe{
+      width: 60%;
+      height: 20rem;
+    }
+  }
 }
