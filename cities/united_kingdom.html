@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="/css_files/cities.css" />
     <link
       rel="stylesheet"
@@ -21,29 +20,43 @@
     <title>London of UK</title>
   </head>
   <body>
-    <header class="navbar" id="navbar">
+    <!-- todo add burger menu -->
+    <header class="header" id="navbar">
       <div class="home-button">
         <a href="/index.html"> <i class="fa-solid fa-house"></i></a>
         <a href="/index.html">major cities overview</a>
       </div>
-      <div class="nav-links">
+      <nav class="main-nav-links">
         <ul>
           <li><a href="#what-nav-target">what</a></li>
           <li><a href="#where-nav-target">where</a></li>
           <li><a href="#weather-nav-target">weather</a></li>
           <li><a href="#unique-nav-target">unique</a></li>
         </ul>
-      </div>
+      </nav>
+      <nav class="mobile-menu">
+        <div class="mobile-menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="mobile-nav-links">
+          <ul>
+            <li><a href="#what-nav-target">what</a></li>
+            <li><a href="#where-nav-target">where</a></li>
+            <li><a href="#weather-nav-target">weather</a></li>
+            <li><a href="#unique-nav-target">unique</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
+      <span class="target" id="what-nav-target"></span>
       <section id="what">
-        <span class="target" id="what-nav-target"></span>
-        <div class="what title">
+        <div class="title">
           <h2>Welcome to London</h2>
           <p>capital of the United Kingdom</p>
         </div>
-        <div class="what card">
-          <p>
+        <div class="paragraph-container">
+          <p class="paragraph">
             London, city, capital of the United Kingdom. It is among the oldest
             of the world’s great cities—its history spanning nearly two
             millennia—and one of the most cosmopolitan. Its wider metropolitan
@@ -51,17 +64,23 @@
             million. By far Britain’s largest metropolis, it is also the
             country’s economic, transportation, and cultural center.
           </p>
+          <figure class="figure">
+            <img src="/pictures/uk_big_ben.jpg" alt="big ben" />
+            <figcaption>The Great Clock of Westminster</figcaption>
+          </figure>
         </div>
-        <img src="/pictures/uk_London_Skyline.jpeg" alt="london skyline" />
+        <div class="image">
+          <img src="/pictures/uk_London_Skyline.jpeg" alt="london skyline" />
+        </div>
       </section>
+      <span class="target" id="where-nav-target"></span>
       <section id="where">
-        <span class="target" id="where-nav-target"></span>
-        <div class="what title">
+        <div class="title">
           <h2>Where Is London</h2>
           <p>The Iconic Capital at England’s Heart</p>
         </div>
-        <div class="where card">
-          <p>
+        <div class="paragraph-container">
+          <p class="paragraph">
             London’s location places it at the very geographic heart of southern
             England, approximately 90 kilometers west of the North Sea coast and
             just 80 kilometers southeast of the Chiltern Hills. This central
@@ -77,46 +96,60 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
+      <span class="target" id="weather-nav-target"></span>
       <section id="weather">
-        <span class="target" id="weather-nav-target"></span>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <div class="card">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
-            error suscipit animi explicabo laudantium repudiandae, facilis
-            voluptate possimus delectus omnis fuga eum eligendi tempore pariatur
-            iste! Optio officiis veritatis pariatur perspiciatis sequi earum nam
-            numquam tempora sed aliquam nihil provident ducimus possimus
-            necessitatibus repellendus temporibus est reiciendis voluptatum in,
-            dolorem voluptate consequuntur quisquam? Repudiandae est similique
-            repellendus facilis placeat necessitatibus porro iusto molestias ut
-            exercitationem doloribus explicabo quis blanditiis earum quo ea
-            sapiente ipsum optio dolorum eum, asperiores maiores neque nesciunt!
-            Expedita neque quo dicta perferendis cumque asperiores sit, dolorem
-            nulla natus fuga voluptatibus totam ipsa optio aliquid, numquam
-            facilis!
-          </p>
+        <div class="title">
+          <h2>Best Time to Visit</h2>
+          <p>Spring and Autumn</p>
+        </div>
+        <div class="paragraph-container">
+          <div class="paragraph">
+            <h3>Spring: March to May</h3>
+            <p>
+              If visiting London in the spring, you’ll enjoy longer daylight
+              hours and mild weather, with temperatures averaging 11C to 15C
+              (52F to 59F). It’s still best to travel with an umbrella, as
+              spring rainfall is common. Easter falls in this period, with
+              public holidays on Good Friday and Easter Monday. Most shops are
+              closed on Easter Sunday, and there may be changes and reduced
+              public transport services.
+            </p>
+          </div>
+          <figure class="figure">
+            <img src="/pictures/uk_weather_spring.jpg" alt="london in spring" />
+            <figcaption>
+              Take part in a number of events across the city in Easter
+            </figcaption>
+          </figure>
+        </div>
+        <div class="paragraph-container">
+          <div class="paragraph">
+            <h3>Autumn: September to November</h3>
+            <p>
+              The busy summer season comes to an end in the second week of
+              September. Autumn is a lovely time of year to visit London – the
+              weather is mild, around 11C to 15C (52F to 59F), and you can enjoy
+              a variety of annual events, from the Totally Thames festival to
+              Halloween celebrations. You can see the city's spectacular
+              Christmas lights and decorations from November onwards. The
+              October half-term is one of the key times for families to visit,
+              taking advantage of the school holidays.
+            </p>
+          </div>
+          <figure class="figure">
+            <img src="/pictures/uk_weather_autumn.jpg" alt="london in autumn" />
+            <figcaption>See the vivid hues on display in autumn</figcaption>
+          </figure>
         </div>
       </section>
+      <span class="target" id="unique-nav-target"></span>
       <section id="unique">
-        <span class="target" id="unique-nav-target"></span>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <div class="card">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
-            error suscipit animi explicabo laudantium repudiandae, facilis
-            voluptate possimus delectus omnis fuga eum eligendi tempore pariatur
-            iste! Optio officiis veritatis pariatur perspiciatis sequi earum nam
-            numquam tempora sed aliquam nihil provident ducimus possimus
-            necessitatibus repellendus temporibus est reiciendis voluptatum in,
-            dolorem voluptate consequuntur quisquam? Repudiandae est similique
-            repellendus facilis placeat necessitatibus porro iusto molestias ut
-            exercitationem doloribus explicabo quis blanditiis earum quo ea
-            sapiente ipsum optio dolorum eum, asperiores maiores neque nesciunt!
-            Expedita neque quo dicta perferendis cumque asperiores sit, dolorem
-            nulla natus fuga voluptatibus totam ipsa optio aliquid, numquam
-            facilis!
-          </p>
+        <div class="title">
+          <h2>Must-See London Sights</h2>
+          <p>Things you won’t wanna miss</p>
+        </div>
+        <div id="lightbox-slides">
+          <!-- todo inset lightbox -->
         </div>
       </section>
       <section>
@@ -142,5 +175,6 @@
     </main>
     <footer></footer>
     <script src="/javascripts_files/navBorder.js"></script>
+    <script src="/javascripts_files/burgerMenu.js"></script>
   </body>
 </html>
