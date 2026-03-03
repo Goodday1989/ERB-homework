@@ -137,6 +137,7 @@ html {
 }
 /*===== end of header css ========*/
 main{
+  position: relative;
   padding-top: 1rem;
   margin: 0 auto;
 }
@@ -381,5 +382,56 @@ img{
 @media (min-width:992px) {
   .caption-container {
   font-size: 1.2rem;
+}
+}
+/* pop-up section*/
+#pop-up{
+  position: relative;
+  width: 100%;
+  transition: background-image 0.3s ease-out;
+}
+.pop-up-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--white);
+    background-image: linear-gradient(to top right, var(--light-blue), var(--dark-blue));
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+    transition: transform 0.3s ease-out;
+    input{
+      width: 100%;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    button{
+      color: var(--gray);
+      font-size: 1.2rem;
+      font-weight: 800;
+      background-color: var(--orange);
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      margin-top: 0.8rem;
+    }
+    button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transform: translate(0,-1px);
+  }
+}
+.pop-up-card.popped{
+  transform: scale(1.2);
+}
+@media (min-width:768px) {
+  .pop-up-card.popped{
+  transform: scale(1.4);
 }
 }
